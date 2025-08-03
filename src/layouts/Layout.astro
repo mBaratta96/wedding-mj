@@ -1,25 +1,27 @@
 ---
 import "@assets/app.css";
 ---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Marco & Jui Weddiing</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" data-theme="royalSaffron">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Marco & Jui Weddiing</title>
+    </head>
+    <body>
+        <div class="navbar bg-base-100 shadow-sm">MJ WEDDING</div>
+        <div class="flex w-full justify-center"><slot /></div>
+    </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>
