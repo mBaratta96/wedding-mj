@@ -3,7 +3,7 @@ import "@assets/app.css";
 ---
 
 <!doctype html>
-<html lang="en" data-theme="royalSaffron">
+<html lang="en" data-theme="burgundyIvory">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -13,7 +13,9 @@ import "@assets/app.css";
     </head>
     <body>
         <div class="navbar bg-base-100 shadow-sm">MJ WEDDING</div>
-        <div class="flex w-full justify-center"><slot /></div>
+        <div class="flex justify-center w-full">
+            <div class="flex w-5xl justify-center flex-col gap-y-2.5"><slot /></div>
+        </div>
     </body>
 </html>
 

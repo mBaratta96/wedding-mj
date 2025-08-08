@@ -1,0 +1,21 @@
+---
+import { PAYPAL_CLIENT_ID } from "astro:env/client";
+const paypalSource = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&buyer-country=DE&currency=EUR&components=buttons&enable-funding=card&disable-funding=venmo,paylater`;
+---
+
+<div id="paypal-button-container"></div>
+<p id="result-message"></p>
+<script is:inline src={paypalSource} data-sdk-integration-source="developer-studio"></script>
+<script src="./app.js"></script>
+<script>
+    const buttonsContainer = document.getElementById("buttons-container");
+    if (buttonsContainer) {
+        buttonsContainer.style.padding = "1rem";
+    }
+</script>
+<style is:global>
+    #paypal-button-container .buttons-container {
+        background-color: red !important;
+        padding: 1rem !important;
+    }
+</style>

@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
@@ -8,4 +8,9 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
+    env: {
+        schema: {
+            PAYPAL_CLIENT_ID: envField.string({ context: "client", access: "public" })
+        }
+    }
 });
